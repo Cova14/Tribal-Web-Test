@@ -19,7 +19,7 @@ const Homepage = () => {
   });
 
   const searchName = async name => {
-    const url = `http://localhost:8000/?name=${name}`
+    const url = `http://localhost:5000/?name=${name}`
     await setLoading(true)
     await axios.get(url)
     .then(async function (response) {
