@@ -1,0 +1,36 @@
+@import '~antd/dist/antd.css';
+body {
+  padding: 20px;
+  background-color: rgb(233, 233, 233);
+}
+h1 {
+  text-align: center;
+}
+.search-container {
+  text-align: center;
+  margin: 10px 0;
+  .ant-input-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ant-input-wrapper {
+      width: 400px;
+    }
+  }
+}
+
+.data-container {
+  .ant-card {
+    margin: 10px 5px;
+    .ant-card-cover {
+      min-height: 194px;
+      max-height: 194px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-height: 160px;
+      }
+    }
+  }
+}
