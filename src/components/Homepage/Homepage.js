@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Input, Card, Row, Col, Empty, Skeleton } from 'antd';
+import { Input, Card, Row, Col, Empty } from 'antd';
 import iTunesLogo from '../../images/ITunes_logo.svg'
 import soapLogo from '../../images/soap_logo.jpg'
 import tvmLogo from '../../images/tvm_api.png'
@@ -45,7 +45,7 @@ const Homepage = () => {
       <div className='data-container'>
         <Row>
           {data.crcind.map(el => (
-            <Col span={6}>
+            <Col span={6} key={el.ID[0]}>
               <Card
                 title={el.Name[0]}
                 cover={<img alt="i_tunes_logo" src={soapLogo} />}
@@ -57,7 +57,7 @@ const Homepage = () => {
             </Col>
           ))}
           {data.itunes.map(el => (
-            <Col span={6}>
+            <Col span={6} key={el.trackId}>
               <Card
                 title={!!el.trackName ? el.trackName : 'Unknown name'}
                 cover={<img alt="i_tunes_logo" src={iTunesLogo} />}
@@ -69,7 +69,7 @@ const Homepage = () => {
             </Col>
           ))}
           {data.tvMaze.map(el => (
-            <Col span={6}>
+            <Col span={6} key={el.show.id}>
               <Card
                 title={el.show.name}
                 cover={<img alt="i_tunes_logo" src={tvmLogo} />}
